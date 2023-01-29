@@ -8,6 +8,7 @@ WORKDIR /app
 COPY . .
 
 # Install the application dependencies
+RUN apt-get update && apt-get install -y python-pip
 RUN npm install
 RUN pip install pytest
 
