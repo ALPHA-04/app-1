@@ -9,6 +9,7 @@ COPY . .
 
 # Install the application dependencies
 RUN npm install
+RUN pip install pytest
 
 # Expose the port on which the application will run
 EXPOSE 3001
