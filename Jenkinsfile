@@ -2,11 +2,11 @@ pipeline {
   agent any
   stages {
    stage('Checkout') {
-            steps {
+          steps {
             checkout scmGit(branches: [[name: '**']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/ALPHA-04/app-1.git']])
-            }
+          }
        }
-         stage('Clone Repository') {
+     stage('Clone Repository') {
             steps {
             git branch: 'DEV', url: 'https://github.com/ALPHA-04/app-1.git'
             }
